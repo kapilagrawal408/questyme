@@ -23,3 +23,12 @@ class ViewInterviewSlot(APIView):
         serializer = InterviewSerializerViewInterview(interview_slots, many=True)
 
         return Response(serializer.data)
+
+    def post(self, request, id,i):
+        interviewSlot = Interviewer_Slot.objects.get(id=id)
+        interviewSlot.interviewee_id = i
+        interviewSlot.save()
+        serializer = InterviewSerializerViewInterview(interviewSlot)
+        print(serializer.data)
+        return Response(serializer.data)
+
