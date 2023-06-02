@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapp',
-    'rest_framework'
+    'rest_framework',
+    'interviewee'
 ]
 
 MIDDLEWARE = [
@@ -80,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'questyme',
         'USER': 'root',
-        'PASSWORD': 'root',
+        'PASSWORD': 'Mzakir@313',
         'HOST': 'localhost',
         'PORT': '3306'
     }
