@@ -22,7 +22,7 @@ class RegisterInterviewer(APIView):
     #interviewee account creadentials
     #username: abc
     #password: FaltuKaPassword@321
-    # this method is to register a new user
+    # this method is to register interviewees new user
     def post(self, request, format=None):
         #parse the data from request object to the JSON object
         data = JSONParser().parse(request)
@@ -58,7 +58,7 @@ class RegisterInterviewer(APIView):
 
 # this APIView is for the single User object
 class RegisterInterviewerDetail(APIView):
-    #get data of a particular student by Id
+    #get data of interviewees particular student by Id
     def get(self, request, pk, format=None):
         user = User.objects.get(pk=pk)
         serializer = UserSerializerGetOnly(user)

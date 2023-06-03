@@ -14,7 +14,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     #this method is to validate the email
     def validate_email(self, value):
-        validator = EmailValidator("Please provide a valid email")
+        validator = EmailValidator("Please provide interviewees valid email")
         validator(value)
 
         if self.initial_data['group'] == 'interviewer':
